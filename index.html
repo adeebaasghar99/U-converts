@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+         content="U Converts: Free online unit converter for temperature, weight, speed, currency, and more. No sign-up required, instant conversions!">
+    <meta name="keywords" 
+        content="unit converter, free converter, celsius to fahrenheit, kg to lbs, km to miles, currency converter, online conversion tool">
+    <meta name="author" content="U Converts">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="U Converts - Free Online Unit Converter">
+    <meta property="og:description"
+        content="Convert units instantly for free! No sign-up needed for temperature, weight, speed, currency, and more.">
+    <meta property="og:image" content="https://uconverts.com/images/logo.png">
+    <meta property="og:url" content="https://uconverts.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="U Converts - Free Online Unit Converter">
+    <meta name="twitter:description"
+        content="Convert units instantly for free! No sign-up needed for temperature, weight, speed, currency, and more.">
+    <meta name="twitter:image" content="https://uconverts.com/images/logo.png">
+    <title>U Converts</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="uconverts.style.css">
+    <link rel="shortcut icon" href="./icons/android-chrome-192x192.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <article>
+            <!-- navbar logo -->
+            <div class="logo">
+                <h1><span><b>U</b> Converts</span><span>.com</span></h1>
+            </div>
+            <p class="welcoming-message">Your <b class="color">FREE</b> Daily Unit Converter<br> (No MATH's Required!)"</p>
+            <!-- navbar list items -->
+            <div class="nav-items">
+                <ul>
+                    <li><a href="#" onclick="switchTab('temperature','celsius-to-fahrenheit')">Celsius °C / Fahrenheit
+                            °F</a>
+                    </li>
+                    <li><a onclick="switchTab('weight', 'kilograms-to-pounds')">Kg/lbs</a></li>
+                    <li><a onclick="switchTab('speed', 'kmh-to-mph')">Km/Miles</a></li>
+                    <li><a onclick="switchTab('volume', 'days-to-hours')">Liters/Gallons</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="./articles.html">Articles</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><a href="./privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </article>
+        <div class="right-container" id="converter">
+            <div class="design-container"></div>
+            <!-- main container heading -->
+            <div class="main-heading">
+                <h1>CONVERSIONS</h1>
+                <h1>MADE EASY..</h1>
+            </div>
+            <p class="main-welcome"><b>Convert Any Units Instantly </b> - 💯% FREE, NO Sign-Up!!</p>
+            <div class="unit-container">
+                <div class="tabs">
+                    <button class="tab active" onclick="switchTab('area')">AREA</button>
+                    <button class="tab" onclick="switchTab('currency')">CURRENCY</button>
+                    <button class="tab" onclick="switchTab('length')">LENGTH</button>
+                    <button class="tab" onclick="switchTab('speed')">SPEED</button>
+                    <button class="tab" onclick="switchTab('temperature')">TEMPERATURE</button>
+                    <button class="tab" onclick="switchTab('time')">TIME</button>
+                    <button class="tab" onclick="switchTab('volume')">VOLUME</button>
+                    <button class="tab" onclick="switchTab('weight')">WEIGHT/MASS</button>
+                </div>
+                <div class="container">
+                    <div id="length" class="tab-content">
+                        <div class="converter">
+                            <div class="input-group">
+                                <label for="length-from">From:</label>
+                                <textarea type="number" id="length-from" oninput="convert('length', 'from')"></textarea>
+                                <select id="length-from-unit" onchange="convert('length', 'from')">
+                                    <option value="meters">Meters</option>
+                                    <option value="kilometers">Kilometers</option>
+                                    <option value="miles">Miles</option>
+                                    <option value="yards">Yards</option>
+                                    <option value="feet">Feet</option>
+                                    <option value="inches"><img src="./icons/check.svg" width="15px" alt=""> Inches
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="equals">=</div>
+                            <div class="input-group">
+                                <label for="length-to">To:</label>
+                                <textarea type="number" id="length-to" oninput="convert('length', 'from')"></textarea>
+                                <select id="length-to-unit" onchange="convert('length', 'to')">
+                                    <option value="feet">Feet</option>
+                                    <option value="meters">Meters</option>
+                                    <option value="kilometers">Kilometers</option>
+                                    <option value="miles">Miles</option>
+                                    <option value="yards">Yards</option>
+                                    <option value="inches"><img src="./icons/check.svg" width="15px" alt=""> Inches
+                                    </option>
+                                </select>
+                            </div>
+                            <button class="swap-btn" onclick="swapUnits('length')"><img src="./icons/reverse.svg"
+                                    width="24px" alt=""></button>
+                        </div>
+                    </div>
+                    <div id="area" class="tab-content active">
+                        <div class="converter">
+                            <div class="input-group">
+                                <label for="area-from">From:</label>
+                                <textarea type="number" id="area-from" oninput="convert('area', 'from')"></textarea>
+                                <select id="area-from-unit" onchange="convert('area', 'from')">
+                                    <option value="square-meters">Square Meters</option>
+                                    <option value="square-kilometers">Square Kilometers</option>
+                                    <option value="acres">Acres</option>
+                                    <option value="square-feet">Square Feet</option>
+                                </select>
+                            </div>
+                            <div class="equals">=</div>
+                            <div class="input-group">
+                                <label for="area-to">To:</label>
+                                <textarea type="number" id="area-to" oninput="convert('area', 'to')"></textarea>
+                                <select id="area-to-unit" onchange="convert('area', 'to')">
+                                    <option value="square-feet">Square Feet</option>
+                                    <option value="square-meters">Square Meters</option>
+                                    <option value="square-kilometers">Square Kilometers</option>
+                                    <option value="acres">Acres</option>
+                                </select>
+                            </div>
+                            <button class="swap-btn" onclick="swapUnits('area')"><img src="./icons/reverse.svg"
+                                    width="24px" alt=""></button>
+                        </div>
+                    </div>
+                    <div id="currency" class="tab-content">
+                        <div class="converter">
+                            <div class="input-group">
+                                <label for="currency-from">From:</label>
+                                <textarea type="number" id="currency-from"
+                                    oninput="convert('currency', 'from')"></textarea>
+                                <select id="currency-from-unit" onchange="convert('currency', 'from')">
+                                    <option value="USD" selected>USD</option>
+                                    <option value="AED">AED</option>
+                                    <option value="AFN">AFN</option>
+                                    <option value="ALL">ALL</option>
+                                    <option value="AMD">AMD</option>
+                                    <option value="ANG">ANG</option>
+                                    <option value="AOA">AOA</option>
+                                    <option value="ARS">ARS</option>
+                                    <option value="AUD">AUD</option>
+                                    <option value="AWG">AWG</option>
+                                    <option value="AZN">AZN</option>
+                                    <option value="BAM">BAM</option>
+                                    <option value="BBD">BBD</option>
+                                    <option value="BDT">BDT</option>
+                                    <option value="BGN">BGN</option>
+                                    <option value="BHD">BHD</option>
+                                    <option value="BIF">BIF</option>
+                                    <option value="BMD">BMD</option>
+                                    <option value="BND">BND</option>
+                                    <option value="BOB">BOB</option>
+                                    <option value="BRL">BRL</option>
+                                    <option value="BSD">BSD</option>
+                                    <option value="BTN">BTN</option>
+                                    <option value="BWP">BWP</option>
+                                    <option value="BYN">BYN</option>
+                                    <option value="BZD">BZD</option>
+                                    <option value="CAD">CAD</option>
+                                    <option value="CDF">CDF</option>
+                                    <option value="CHF">CHF</option>
+                                    <option value="CLP">CLP</option>
+                                    <option value="CNY">CNY</option>
+                                    <option value="COP">COP</option>
+                                    <option value="CRC">CRC</option>
+                                    <option value="CUP">CUP</option>
+                                    <option value="CVE">CVE</option>
+                                    <option value="CZK">CZK</option>
+                                    <option value="DJF">DJF</option>
+                                    <option value="DKK">DKK</option>
+                                    <option value="DOP">DOP</option>
+                                    <option value="DZD">DZD</option>
+                                    <option value="EGP">EGP</option>
+                                    <option value="ERN">ERN</option>
+                                    <option value="ETB">ETB</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="FJD">FJD</option>
+                                    <option value="FKP">FKP</option>
+                                    <option value="FOK">FOK</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="GEL">GEL</option>
+                                    <option value="GGP">GGP</option>
+                                    <option value="GHS">GHS</option>
+                                    <option value="GIP">GIP</option>
+                                    <option value="GMD">GMD</option>
+                                    <option value="GNF">GNF</option>
+                                    <option value="GTQ">GTQ</option>
+                                    <option value="GYD">GYD</option>
+                                    <option value="HKD">HKD</option>
+                                    <option value="HNL">HNL</option>
+                                    <option value="HRK">HRK</option>
+                                    <option value="HTG">HTG</option>
+                                    <option value="HUF">HUF</option>
+                                    <option value="IDR">IDR</option>
+                                    <option value="ILS">ILS</option>
+                                    <option value="IMP">IMP</option>
+                                    <option value="INR">INR</option>
+                                    <option value="IQD">IQD</option>
+                                    <option value="IRR">IRR</option>
+                                    <option value="ISK">ISK</option>
+                                    <option value="JEP">JEP</option>
+                                    <option value="JMD">JMD</option>
+                                    <option value="JOD">JOD</option>
+                                    <option value="JPY">JPY</option>
+                                    <option value="KES">KES</option>
+                                    <option value="KGS">KGS</option>
+                                    <option value="KHR">KHR</option>
+                                    <option value="KID">KID</option>
+                                    <option value="KMF">KMF</option>
+                                    <option value="KRW">KRW</option>
+                                    <option value="KWD">KWD</option>
+                                    <option value="KYD">KYD</option>
+                                    <option value="KZT">KZT</option>
+                                    <option value="LAK">LAK</option>
+                                    <option value="LBP">LBP</option>
+                                    <option value="LKR">LKR</option>
+                                    <option value="LRD">LRD</option>
+                                    <option value="LSL">LSL</option>
+                                    <option value="LYD">LYD</option>
+                                    <option value="MAD">MAD</option>
+                                    <option value="MDL">MDL</option>
+                                    <option value="MGA">MGA</option>
+                                    <option value="MKD">MKD</option>
+                                    <option value="MMK">MMK</option>
+                                    <option value="MNT">MNT</option>
+                                    <option value="MOP">MOP</option>
+                                    <option value="MRU">MRU</option>
+                                    <option value="MUR">MUR</option>
+                                    <option value="MVR">MVR</option>
+                                    <option value="MWK">MWK</option>
+                                    <option value="MXN">MXN</option>
+                                    <option value="MYR">MYR</option>
+                                    <option value="MZN">MZN</option>
+                                    <option value="NAD">NAD</option>
+                                    <option value="NGN">NGN</option>
+                                    <option value="NIO">NIO</option>
+                                    <option value="NOK">NOK</option>
+                                    <option value="NPR">NPR</option>
+                                    <option value="NZD">NZD</option>
+                                    <option value="OMR">OMR</option>
+                                    <option value="PAB">PAB</option>
+                                    <option value="PEN">PEN</option>
+                                    <option value="PGK">PGK</option>
+                                    <option value="PHP">PHP</option>
+                                    <option value="PKR">PKR</option>
+                                    <option value="PLN">PLN</option>
+                                    <option value="PYG">PYG</option>
+                                    <option value="QAR">QAR</option>
+                                    <option value="RON">RON</option>
+                                    <option value="RSD">RSD</option>
+                                    <option value="RUB">RUB</option>
+                                    <option value="RWF">RWF</option>
+                                    <option value="SAR">SAR</option>
+                                    <option value="SBD">SBD</option>
+                                    <option value="SCR">SCR</option>
+                                    <option value="SDG">SDG</option>
+                                    <option value="SEK">SEK</option>
+                                    <option value="SGD">SGD</option>
+                                    <option value="SHP">SHP</option>
+                                    <option value="SLE">SLE</option>
+                                    <option value="SLL">SLL</option>
+                                    <option value="SOS">SOS</option>
+                                    <option value="SRD">SRD</option>
+                                    <option value="SSP">SSP</option>
+                                    <option value="STN">STN</option>
+                                    <option value="SYP">SYP</option>
+                                    <option value="SZL">SZL</option>
+                                    <option value="THB">THB</option>
+                                    <option value="TJS">TJS</option>
+                                    <option value="TMT">TMT</option>
+                                    <option value="TND">TND</option>
+                                    <option value="TOP">TOP</option>
+                                    <option value="TRY">TRY</option>
+                                    <option value="TTD">TTD</option>
+                                    <option value="TVD">TVD</option>
+                                    <option value="TWD">TWD</option>
+                                    <option value="TZS">TZS</option>
+                                    <option value="UAH">UAH</option>
+                                    <option value="UGX">UGX</option>
+                                    <option value="UYU">UYU</option>
+                                    <option value="UZS">UZS</option>
+                                    <option value="VES">VES</option>
+                                    <option value="VND">VND</option>
+                                    <option value="VUV">VUV</option>
+                                    <option value="WST">WST</option>
+                                    <option value="XAF">XAF</option>
+                                    <option value="XCD">XCD</option>
+                                    <option value="XCG">XCG</option>
+                                    <option value="XDR">XDR</option>
+                                    <option value="XOF">XOF</option>
+                                    <option value="XPF">XPF</option>
+                                    <option value="YER">YER</option>
+                                    <option value="ZAR">ZAR</option>
+                                    <option value="ZMW">ZMW</option>
+                                    <option value="ZWL">ZWL</option>
+                                </select>
+                            </div>
+                            <div class="equals">=</div>
+                            <div class="input-group">
+                                <label for="currency-to">To:</label>
+                                <textarea type="number" id="currency-to" oninput="convert('currency', 'to')"
+                                    step="any"></textarea>
+                                <select id="currency-to-unit" onchange="convert('currency', 'to')">
+                                    <option value="EUR" selected>EUR</option>
+                                    <option value="USD">USD</option>
+                                    <option value="AED">AED</option>
+                                    <option value="AFN">AFN</option>
+                                    <option value="ALL">ALL</option>
+                                    <option value="AMD">AMD</option>
+                                    <option value="ANG">ANG</option>
+                                    <option value="AOA">AOA</option>
+                                    <option value="ARS">ARS</option>
+                                    <option value="AUD">AUD</option>
+                                    <option value="AWG">AWG</option>
+                                    <option value="AZN">AZN</option>
+                                    <option value="BAM">BAM</option>
+                                    <option value="BBD">BBD</option>
+                                    <option value="BDT">BDT</option>
+                                    <option value="BGN">BGN</option>
+                                    <option value="BHD">BHD</option>
+                                    <option value="BIF">BIF</option>
+                                    <option value="BMD">BMD</option>
+                                    <option value="BND">BND</option>
+                                    <option value="BOB">BOB</option>
+                                    <option value="BRL">BRL</option>
+                                    <option value="BSD">BSD</option>
+                                    <option value="BTN">BTN</option>
+                                    <option value="BWP">BWP</option>
+                                    <option value="BYN">BYN</option>
+                                    <option value="BZD">BZD</option>
+                                    <option value="CAD">CAD</option>
+                                    <option value="CDF">CDF</option>
+                                    <option value="CHF">CHF</option>
+                                    <option value="CLP">CLP</option>
+                                    <option value="CNY">CNY</option>
+                                    <option value="COP">COP</option>
+                                    <option value="CRC">CRC</option>
+                                    <option value="CUP">CUP</option>
+                                    <option value="CVE">CVE</option>
+                                    <option value="CZK">CZK</option>
+                                    <option value="DJF">DJF</option>
+                                    <option value="DKK">DKK</option>
+                                    <option value="DOP">DOP</option>
+                                    <option value="DZD">DZD</option>
+                                    <option value="EGP">EGP</option>
+                                    <option value="ERN">ERN</option>
+                                    <option value="ETB">ETB</option>
+                                    <option value="FJD">FJD</option>
+                                    <option value="FKP">FKP</option>
+                                    <option value="FOK">FOK</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="GEL">GEL</option>
+                                    <option value="GGP">GGP</option>
+                                    <option value="GHS">GHS</option>
+                                    <option value="GIP">GIP</option>
+                                    <option value="GMD">GMD</option>
+                                    <option value="GNF">GNF</option>
+                                    <option value="GTQ">GTQ</option>
+                                    <option value="GYD">GYD</option>
+                                    <option value="HKD">HKD</option>
+                                    <option value="HNL">HNL</option>
+                                    <option value="HRK">HRK</option>
+                                    <option value="HTG">HTG</option>
+                                    <option value="HUF">HUF</option>
+                                    <option value="IDR">IDR</option>
+                                    <option value="ILS">ILS</option>
+                                    <option value="IMP">IMP</option>
+                                    <option value="INR">INR</option>
+                                    <option value="IQD">IQD</option>
+                                    <option value="IRR">IRR</option>
+                                    <option value="ISK">ISK</option>
+                                    <option value="JEP">JEP</option>
+                                    <option value="JMD">JMD</option>
+                                    <option value="JOD">JOD</option>
+                                    <option value="JPY">JPY</option>
+                                    <option value="KES">KES</option>
+                                    <option value="KGS">KGS</option>
+                                    <option value="KHR">KHR</option>
+                                    <option value="KID">KID</option>
+                                    <option value="KMF">KMF</option>
+                                    <option value="KRW">KRW</option>
+                                    <option value="KWD">KWD</option>
+                                    <option value="KYD">KYD</option>
+                                    <option value="KZT">KZT</option>
+                                    <option value="LAK">LAK</option>
+                                    <option value="LBP">LBP</option>
+                                    <option value="LKR">LKR</option>
+                                    <option value="LRD">LRD</option>
+                                    <option value="LSL">LSL</option>
+                                    <option value="LYD">LYD</option>
+                                    <option value="MAD">MAD</option>
+                                    <option value="MDL">MDL</option>
+                                    <option value="MGA">MGA</option>
+                                    <option value="MKD">MKD</option>
+                                    <option value="MMK">MMK</option>
+                                    <option value="MNT">MNT</option>
+                                    <option value="MOP">MOP</option>
+                                    <option value="MRU">MRU</option>
+                                    <option value="MUR">MUR</option>
+                                    <option value="MVR">MVR</option>
+                                    <option value="MWK">MWK</option>
+                                    <option value="MXN">MXN</option>
+                                    <option value="MYR">MYR</option>
+                                    <option value="MZN">MZN</option>
+                                    <option value="NAD">NAD</option>
+                                    <option value="NGN">NGN</option>
+                                    <option value="NIO">NIO</option>
+                                    <option value="NOK">NOK</option>
+                                    <option value="NPR">NPR</option>
+                                    <option value="NZD">NZD</option>
+                                    <option value="OMR">OMR</option>
+                                    <option value="PAB">PAB</option>
+                                    <option value="PEN">PEN</option>
+                                    <option value="PGK">PGK</option>
+                                    <option value="PHP">PHP</option>
+                                    <option value="PKR">PKR</option>
+                                    <option value="PLN">PLN</option>
+                                    <option value="PYG">PYG</option>
+                                    <option value="QAR">QAR</option>
+                                    <option value="RON">RON</option>
+                                    <option value="RSD">RSD</option>
+                                    <option value="RUB">RUB</option>
+                                    <option value="RWF">RWF</option>
+                                    <option value="SAR">SAR</option>
+                                    <option value="SBD">SBD</option>
+                                    <option value="SCR">SCR</option>
+                                    <option value="SDG">SDG</option>
+                                    <option value="SEK">SEK</option>
+                                    <option value="SGD">SGD</option>
+                                    <option value="SHP">SHP</option>
+                                    <option value="SLE">SLE</option>
+                                    <option value="SLL">SLL</option>
+                                    <option value="SOS">SOS</option>
+                                    <option value="SRD">SRD</option>
+                                    <option value="SSP">SSP</option>
+                                    <option value="STN">STN</option>
+                                    <option value="SYP">SYP</option>
+                                    <option value="SZL">SZL</option>
+                                    <option value="THB">THB</option>
+                                    <option value="TJS">TJS</option>
+                                    <option value="TMT">TMT</option>
+                                    <option value="TND">TND</option>
+                                    <option value="TOP">TOP</option>
+                                    <option value="TRY">TRY</option>
+                                    <option value="TTD">TTD</option>
+                                    <option value="TVD">TVD</option>
+                                    <option value="TWD">TWD</option>
+                                    <option value="TZS">TZS</option>
+                                    <option value="UAH">UAH</option>
+                                    <option value="UGX">UGX</option>
+                                    <option value="UYU">UYU</option>
+                                    <option value="UZS">UZS</option>
+                                    <option value="VES">VES</option>
+                                    <option value="VND">VND</option>
+                                    <option value="VUV">VUV</option>
+                                    <option value="WST">WST</option>
+                                    <option value="XAF">XAF</option>
+                                    <option value="XCD">XCD</option>
+                                    <option value="XCG">XCG</option>
+                                    <option value="XDR">XDR</option>
+                                    <option value="XOF">XOF</option>
+                                    <option value="XPF">XPF</option>
+                                    <option value="YER">YER</option>
+                                    <option value="ZAR">ZAR</option>
+                                    <option value="ZMW">ZMW</option>
+                                    <option value="ZWL">ZWL</option>
+                                </select>
+                            </div>
+                            <button class="swap-btn" onclick="swapUnits('currency')"><img src="./icons/reverse.svg"
+                                    width="24px" alt=""></button>
+                        </div>
+                        <p class="note">*Note: Currency rates are for demonstration purposes only and may not reflect
+                            current rates.</p>
+                    </div>
+                    <div id="speed" class="tab-content">
+                        <div class="converter">
+                            <div class="input-group">
+                                <label for="speed-from">From:</label>
+                                <textarea type="number" id="speed-from" oninput="convert('speed', 'from')"></textarea>
+                                <select id="speed-from-unit" onchange="convert('speed', 'from')">
+                                    <option value="kmh">Kilometers per Hour (km/h)</option>
+                                    <option value="mph">Miles per Hour (mph)</option>
+                                    <option value="ms">Meters per Second (m/s)</option>
+                                </select>
+                            </div>
+                            <div class="equals">=</div>
+                            <div class="input-group">
+                                <label for="speed-to">To:</label>
+                                <textarea type="number" id="speed-to" oninput="convert('speed', 'to')"></textarea>
+                                <select id="speed-to-unit" onchange="convert('speed', 'to')">
+                                    <option value="mph">Miles per Hour (mph)</option>
+                                    <option value="kmh">Kilometers per Hour (km/h)</option>
+                                    <option value="ms">Meters per Second (m/s)</option>
+                                </select>
+                            </div>
+                            <button class="swap-btn" onclick="swapUnits('speed')"><img src="./icons/reverse.svg"
+                                    width="24px" alt=""></button>
+                        </div>
+                    </div>
+                    <div id="temperature" class="tab-content">
+                        <div class="converter">
+                            <div class="input-group">
+                                <label for="temperature-from">From:</label>
+                                <textarea type="number" id="temperature-from"
+                                    oninput="convert('temperature', 'from')"></textarea>
+                                <select id="temperature-from-unit" onchange="convert('temperature', 'from')">
+                                    <option value="celsius">Celsius</option>
+                                    <option value="fahrenheit">Fahrenheit</option>
+                                    <option value="kelvin">Kelvin</option>
+                                </select>
+                            </div>
+                            <div class="equals">=</div>
+                            <div class="input-group">
+                                <label for="temperature-to">To:</label>
+                                <textarea type="number" id="temperature-to"
+                                    oninput="convert('temperature', 'from')"></textarea>
+                                <select id="temperature-to-unit" onchange="convert('temperature', 'to')">
+                                    <option value="fahrenheit">Fahrenheit</option>
+                                    <option value="celsius">Celsius</option>
+                                    <option value="kelvin">Kelvin</option>
+                                </select>
+                            </div>
+                            <button class="swap-btn" onclick="swapUnits('temperature')"><img src="./icons/reverse.svg"
+                                    width="24px" alt=""></button>
+                        </div>
+                    </div>
+                    <div id="time" class="tab-content">
+                        <div class="converter">
+                            <div class="input-group">
+                                <label for="time-from">From:</label>
+                                <textarea type="number" id="time-from" oninput="convert('time', 'from')"></textarea>
+                                <select id="time-from-unit" onchange="convert('time', 'from')">
+                                    <option value="days">Days</option>
+                                    <option value="minutes">Minutes</option>
+                                    <option value="hours">Hours</option>
+                                    <option value="seconds">Seconds</option>
+                                </select>
+                            </div>
+                            <div class="equals">=</div>
+                            <div class="input-group">
+                                <label for="time-to">To:</label>
+                                <textarea type="number" id="time-to" oninput="convert('time', 'to')"></textarea>
+                                <select id="time-to-unit" onchange="convert('time', 'to')">
+                                    <option value="hours">Hours</option>
+                                    <option value="minutes">Minutes</option>
+                                    <option value="seconds">Seconds</option>
+                                    <option value="days">Days</option>
+                                </select>
+                            </div>
+                            <button class="swap-btn" onclick="swapUnits('time')"><img src="./icons/reverse.svg"
+                                    width="24px" alt=""></button>
+                        </div>
+                    </div>
+                    <div id="volume" class="tab-content">
+                        <div class="converter">
+                            <div class="input-group">
+                                <label for="volume-from">From:</label>
+                                <textarea type="number" id="volume-from" oninput="convert('volume', 'from')"></textarea>
+                                <select id="volume-from-unit" onchange="convert('volume', 'from')">
+                                    <option value="liters">Liters</option>
+                                    <option value="gallons">Gallons</option>
+                                    <option value="cubic-meters">Cubic Meters</option>
+                                </select>
+                            </div>
+                            <div class="equals">=</div>
+                            <div class="input-group">
+                                <label for="volume-to">To:</label>
+                                <textarea type="number" id="volume-to" oninput="convert('volume', 'to')"></textarea>
+                                <select id="volume-to-unit" onchange="convert('volume', 'to')">
+                                    <option value="gallons">Gallons</option>
+                                    <option value="liters">Liters</option>
+                                    <option value="cubic-meters">Cubic Meters</option>
+                                </select>
+                            </div>
+                            <button class="swap-btn" onclick="swapUnits('volume')"><img src="./icons/reverse.svg"
+                                    width="24px" alt=""></button>
+                        </div>
+                    </div>
+                    <div id="weight" class="tab-content">
+                        <div class="converter">
+                            <div class="input-group">
+                                <label for="weight-from">From:</label>
+                                <textarea type="number" id="weight-from" oninput="convert('weight', 'from')"></textarea>
+                                <select id="weight-from-unit" onchange="convert('weight', 'from')">
+                                    <option value="kilograms">Kilograms</option>
+                                    <option value="pounds">Lbs</option>
+                                    <option value="grams">Grams</option>
+                                </select>
+                            </div>
+                            <div class="equals">=</div>
+                            <div class="input-group">
+                                <label for="weight-to">To:</label>
+                                <textarea type="number" id="weight-to" oninput="convert('weight', 'to')"></textarea>
+                                <select id="weight-to-unit" onchange="convert('weight', 'to')">
+                                    <option value="pounds">Lbs</option>
+                                    <option value="kilograms">Kilograms</option>
+                                    <option value="grams">Grams</option>
+                                </select>
+                            </div>
+                            <button class="swap-btn" onclick="swapUnits('weight')"><img src="./icons/reverse.svg"
+                                    width="24px" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checker-box">
+                <h2>UNITS CONVERTER FINDER</h2>
+                <div class="unit-rows">
+                    <div class="unit-row">
+                        <label>From Unit:</label>
+                        <input type="text" id="fromUnit" placeholder="e.g., kilogram" oninput="checkUnits()">
+                    </div>
+                    <div class="unit-row">
+                        <label>To Unit:</label>
+                        <input type="text" id="toUnit" placeholder="e.g., lbs" oninput="checkUnits()">
+                    </div>
+                </div>
+                <div class="feedback" id="feedback"></div>
+                <div class="conversions" id="conversions"></div>
+                <div class="category-info" id="categoryInfo"></div>
+            </div>
+            <div class="table">
+                <img src="./images/table2.jpg" alt="Unit conversion table for measurements">
+                <img src="./images/kitchen conversions.jpg" alt="Unit conversion table for measurements">
+                <img src="./images/WhatsApp Image 2025-04-15 at 01.13.08_0452a1b7.jpg"
+                    alt="Unit conversion table for measurements">
+                <img src="./images/big-table.jpg" alt="Unit conversion table for measurements">
+                <img src="./images/metric2.jpg" alt="Unit conversion table for measurements">
+                <img src="./images/meter.jpg" alt="Unit conversion table for measurements">
+            </div>
+            <!-- Overlay for zoomed image -->
+            <div class="overlay" id="overlay">
+                <button class="close-btn" id="closeBtn">&times;</button>
+                <img id="zoomedImg" src="" alt="Zoomed Image">
+            </div>
+
+        </div>
+    </div>
+
+    <p class="welcome">FREE Online Unit Converter - Supporting Orphans ❤️ Around the Globe!!</p>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "U Converts",
+          "url": "https://yourdomain.com",
+          "description": "Free online unit converter for instant conversions of temperature, weight, speed, currency, and more.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://yourdomain.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+        </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

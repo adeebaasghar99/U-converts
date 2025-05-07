@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Uconverts.com</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./icons/android-chrome-192x192.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-color: #041F76;
+            --primary-color: #1A77DD;
+            --list-item-color: #2090FE;
+            --text-white: #fff;
+            --text-black: #000;
+            --primary-padding: 20px 80px;
+        }
+
+        body {
+            font-family: "Clash Display", sans-serif;
+            color: var(--text-black);
+            background-color: #eeeeee;
+        }
+
+        .logo h1 {
+            font-size: clamp(24px, 5vw, 32px);
+            font-weight: 600;
+            position: relative;
+        }
+
+        .logo h1::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: orange;
+            border-radius: 50%;
+            top: 2px;
+            left: 1px;
+        }
+
+        .logo h1::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: orange;
+            border-radius: 50%;
+            top: 2px;
+            left: 21px;
+        }
+
+        .logo h1 span:first-child {
+            color: var(--primary-color);
+        }
+
+        .logo h1 span:first-child b {
+            font-size: clamp(28px, 6vw, 38px);
+        }
+
+        .logo h1 span:last-child {
+            color: orange;
+        }
+
+        .popp {
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Responsive Navigation */
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --primary-padding: 20px 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+                margin-top: 1rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links a {
+                font-size: 14px;
+            }
+        }
+
+        /* Section Styling */
+        .privacy-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .privacy-section h2 {
+            color: var(--main-color);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-section p,
+        .privacy-section ul {
+            color: #4a4a4a;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .privacy-section ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        .privacy-section ul li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="text-white py-4" style="padding: var(--primary-padding);">
+        <div
+            class="container mx-auto nav-container flex flex-col md:flex-row justify-between items-start md:items-center">
+            <a href="index.html" class="logo">
+                <h1><span><b>U</b> Converts</span><span>.com</span></h1>
+            </a>
+            <div class="nav-links flex">
+                <a href="index.html" class="text-black hover:text-[#1A77DD]">Home</a>
+                <a href="about.html" class="text-black hover:text-[#1A77DD]">About</a>
+                <a href="articles.html" class="text-black hover:text-[#1A77DD]">Articles</a>
+                <a href="contact.html" class="text-black hover:text-[#1A77DD]">Contact</a>
+                <a href="privacy.html" class="text-[#1A77DD] font-semibold">Privacy Policy</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-[#1A77DD] text-white py-6" style="padding: 40px 20px;">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">Privacy Policy</h1>
+            <p class="mt-2 text-base sm:text-lg md:text-xl">Your Trust Matters to Us</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 w-full md:w-[70%]" style="padding: 40px 20px;">
+        <section class="privacy-section">
+            <h2>Why Your Privacy Matters</h2>
+            <p class="popp">
+                We’re more than just a fast and accurate unit conversion tool—we’re a purpose-driven platform supporting
+                orphans globally. We respect your privacy, never sell your data, and keep your experience ad-free and
+                secure.
+            </p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>What Information We Collect</h2>
+            <p class="popp">
+                Uconverts.com is a no-signup, no-login service. We collect limited non-personal data to improve
+                performance and user experience, including:
+            </p>
+            <ul class="popp">
+                <li>Browser type and version</li>
+                <li>Device type and operating system</li>
+                <li>Anonymous IP address</li>
+                <li>Language preference</li>
+                <li>Usage patterns (most used unit converters)</li>
+            </ul>
+            <p class="popp">
+                We do not collect or store any personally identifiable information.
+            </p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Use of Cookies</h2>
+            <p class="popp">
+                We use only essential cookies to enhance your experience. These help us:
+            </p>
+            <ul class="popp">
+                <li>Remember your preferred settings (e.g., last used unit type)</li>
+                <li>Track anonymous site usage via tools like Google Analytics</li>
+                <li>Improve speed and reliability of our converters</li>
+            </ul>
+            <p class="popp">
+                No third-party ad cookies. No invasive tracking. No data sales. Ever.
+            </p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Third-Party Tools</h2>
+            <p class="popp">
+                We may use privacy-respecting tools (e.g., Google Analytics, Cloudflare) for security and site
+                optimization. These services comply with GDPR, CCPA, and industry best practices.
+            </p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Your Data Is Never Sold</h2>
+            <p class="popp">
+                We do not display ads, and we never sell or share your personal data with advertisers or data brokers.
+            </p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Our Motivation and Purpose</h2>
+            <p class="popp">
+                Your visits help grow a platform that supports global orphan care, education, and well-being. By simply
+                using our converter, you’re contributing to a greater cause.
+            </p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Your Rights & Control</h2>
+            <p class="popp">
+                You can manage cookies via your browser or use incognito mode for an extra layer of privacy. Under
+                GDPR/CCPA laws (if applicable), you have the right to:
+            </p>
+            <ul class="popp">
+                <li>Access any stored data</li>
+                <li>Request deletion of anonymized usage data</li>
+                <li>Know how your data is handled</li>
+            </ul>
+            <p class="popp">
+                We make it easy—just email us at <a href="mailto:uconvertss@gmail.com"
+                    class="text-[#2090FE] hover:underline">uconvertss@gmail.com</a>.
+            </p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Privacy Policy Updates</h2>
+            <p class="popp">
+                We may update this privacy policy to reflect improvements or legal requirements. Changes will be posted
+                with a new effective date at the top.
+            </p>
+        </section>
+
+        <a href="index.html"
+            class="mt-6 inline-block bg-[#1A77DD] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-[#041F76] text-sm sm:text-base popp">Back
+            to Home</a>
+    </main>
+</body>
+
+</html>

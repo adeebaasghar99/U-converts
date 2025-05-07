@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Uconverts.com - Free Online Unit Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./icons/android-chrome-192x192.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-color: #041F76;
+            --primary-color: #1A77DD;
+            --list-item-color: #2090FE;
+            --text-black: #000;
+            --primary-padding: 20px 80px;
+        }
+
+        body {
+            font-family: "Clash Display", sans-serif;
+            background-color: #eeeeee;
+        }
+
+        .logo h1 {
+            font-size: clamp(24px, 5vw, 32px);
+            font-weight: 600;
+            position: relative;
+        }
+
+        .logo h1::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: orange;
+            border-radius: 50%;
+            top: 2px;
+            left: 1px;
+        }
+
+        .logo h1::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: orange;
+            border-radius: 50%;
+            top: 2px;
+            left: 21px;
+        }
+
+        .logo h1 span:first-child {
+            color: var(--primary-color);
+        }
+
+        .logo h1 span:first-child b {
+            font-size: clamp(28px, 6vw, 38px);
+        }
+
+        .logo h1 span:last-child {
+            color: orange;
+        }
+
+        .popp {
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Responsive Navigation */
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --primary-padding: 20px 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+                margin-top: 1rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="text-white py-4" style="padding: var(--primary-padding);">
+        <div
+            class="container mx-auto nav-container flex  md:flex-row justify-between items-start md:items-center">
+            <a href="index.html" class="logo">
+                <h1><span><b>U</b> Converts</span><span>.com</span></h1>
+            </a>
+            <div class="nav-links flex">
+                <a href="index.html" class="text-black hover:text-[#1A77DD]">Home</a>
+                <a href="about.html" class="text-[#1A77DD] font-semibold">About</a>
+                <a href="articles.html" class="text-black hover:text-[#1A77DD]">Articles</a>
+                <a href="contact.html" class="text-black hover:text-[#1A77DD]">Contact</a>
+                <a href="privacy.html" class="text-black">Privacy Policy</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-[#1A77DD] text-white py-6" style="padding: 40px 20px;">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">About Uconverts.com</h1>
+            <p class="mt-1 italic text-base sm:text-lg md:text-xl">Every click support orphans worldwide!</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 w-full md:w-[90%]" style="padding: 40px 20px;">
+        <!-- About Section -->
+        <section class="text-center mb-12 bg-white text-black rounded-lg p-6" style="padding: 30px 20px;">
+            <h2 class="text-2xl md:text-3xl font-semibold text-[#041F76]">Our Mission</h2>
+            <p class="mt-4 text-sm sm:text-base leading-8 text-gray-700 mx-auto text-center popp">
+                Uconverts.com is more than just a unit converter—it's a purpose-driven platform dedicated to making a
+                difference. <br> Our mission is to provide quick, reliable, and 100% free unit conversion tools for students,
+                professionals, and curious minds worldwide, while supporting orphans globally. <br> Every visit to our
+                ad-free site helps fund food, shelter, and education for orphaned children, making every conversion a
+                step toward a better future.
+            </p>
+        </section>
+
+        <!-- Why We Stand Out -->
+        <section class="bg-[#f0f6ff] py-12 px-4 text-center rounded-lg text-black">
+            <h2 class="text-2xl md:text-3xl font-semibold text-[#041F76]">Why Uconverts.com?</h2>
+            <div class="mt-6 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div>
+                    <h3 class="text-base sm:text-lg md:text-xl font-semibold text-[#1A77DD]">Simple & Accurate</h3>
+                    <p class="mt-2 text-gray-600 text-sm sm:text-base">Instant results with a clean, intuitive
+                        interface.</p>
+                </div>
+                <div>
+                    <h3 class="text-base sm:text-lg md:text-xl font-semibold text-[#1A77DD]">100% Ad-Free</h3>
+                    <p class="mt-2 text-gray-600 text-sm sm:text-base">No pop-ups, no distractions—just conversions.</p>
+                </div>
+                <div>
+                    <h3 class="text-base sm:text-lg md:text-xl font-semibold text-[#1A77DD]">Supports a Cause</h3>
+                    <p class="mt-2 text-gray-600 text-sm sm:text-base">Your visits help grow a platform for global
+                        orphan care.</p>
+                </div>
+            </div>
+            <a href="index.html"
+                class="mt-6 inline-block bg-[#1A77DD] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-[#2090FE] text-sm sm:text-base">Try
+                Our Converters</a>
+        </section>
+    </main>
+</body>
+
+</html>

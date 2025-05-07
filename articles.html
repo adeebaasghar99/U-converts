@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles - Uconverts.com</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./icons/android-chrome-192x192.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: #041F76;
+      --primary-color: #1A77DD;
+      --list-item-color: #2090FE;
+      --text-white: #fff;
+      --text-black: #000;
+      --primary-padding: 20px 80px;
+    }
+
+    body {
+      font-family: "Clash Display", sans-serif;
+      background-color: #eeeeee;
+      color: var(--text-black);
+    }
+
+    .logo h1 {
+      font-size: clamp(24px, 5vw, 32px);
+      font-weight: 600;
+      position: relative;
+    }
+
+    .logo h1::before {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: orange;
+      border-radius: 50%;
+      top: 2px;
+      left: 1px;
+    }
+
+    .logo h1::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: orange;
+      border-radius: 50%;
+      top: 2px;
+      left: 21px;
+    }
+
+    .logo h1 span:first-child {
+      color: var(--primary-color);
+    }
+
+    .logo h1 span:first-child b {
+      font-size: clamp(28px, 6vw, 38px);
+    }
+
+    .logo h1 span:last-child {
+      color: orange;
+    }
+
+    .popp {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .article-card {
+      transition: transform 0.3s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Responsive Navigation */
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --primary-padding: 20px 20px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links a {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="text-white py-4" style="padding: var(--primary-padding);">
+    <div
+        class="container mx-auto nav-container flex flex-col md:flex-row justify-between items-start md:items-center">
+        <a href="index.html" class="logo">
+            <h1><span><b>U</b> Converts</span><span>.com</span></h1>
+        </a>
+        <div class="nav-links flex">
+            <a href="index.html" class="text-black hover:text-[#1A77DD]">Home</a>
+            <a href="about.html" class="text-black hover:text-[#1A77DD]">About</a>
+            <a href="articles.html" class="text-[#1A77DD] font-semibold hover:text-[#1A77DD]">Articles</a>
+            <a href="contact.html" class="text-black hover:text-[#1A77DD]">Contact</a>
+            <a href="privacy.html" class="text-black">Privacy Policy</a>
+        </div>
+    </div>
+</nav>
+  <!-- Header -->
+  <header class="bg-[#1A77DD] text-white py-6" style="padding: 40px 20px;">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">Articles</h1>
+      <p class="mt-2 text-base sm:text-lg md:text-xl">Daily Unit Conversions & It's Impact.</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-12 w-full md:w-[90%]" style="padding: 40px 20px;">
+    <!-- Articles Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl md:text-3xl font-semibold text-[#041F76] text-center mb-8">Explore Our Articles</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="article-card bg-white p-6 rounded-lg shadow-md text-black">
+          <h3 class="text-base sm:text-lg md:text-xl font-semibold text-[#1A77DD]"><a href="article1.html" class="hover:text-[#2090FE]">How Unit Conversions Help</a></h3>
+          <p class="mt-2 text-sm sm:text-base text-gray-600">Unit conversion is vital in education, science, and daily life. Learn how it helps students, scientists, and everyday tasks.</p>
+          <p class="mt-2 text-xs sm:text-sm text-gray-500">Keywords: unit conversion in education, students unit converter</p>
+        </div>
+        <div class="article-card bg-white p-6 rounded-lg shadow-md text-black">
+          <h3 class="text-base sm:text-lg md:text-xl font-semibold text-[#1A77DD]"><a href="article2.html" class="hover:text-[#2090FE]">Why Accurate Unit Conversion Matters</a></h3>
+          <p class="mt-2 text-sm sm:text-base text-gray-600">Small errors can lead to big problems. Discover common scenarios where accuracy is critical.</p>
+          <p class="mt-2 text-xs sm:text-sm text-gray-500">Keywords: accurate unit conversions, measurement mistakes</p>
+        </div>
+        <div class="article-card bg-white p-6 rounded-lg shadow-md text-black">
+          <h3 class="text-base sm:text-lg md:text-xl font-semibold text-[#1A77DD]"><a href="article3.html" class="hover:text-[#2090FE]">Metric vs. Imperial</a></h3>
+          <p class="mt-2 text-sm sm:text-base text-gray-600">Understand the differences between Metric and Imperial systems and why it matters.</p>
+          <p class="mt-2 text-xs sm:text-sm text-gray-500">Keywords: global unit systems, metric vs imperial</p>
+        </div>
+        <div class="article-card bg-white p-6 rounded-lg shadow-md text-black">
+          <h3 class="text-base sm:text-lg md:text-xl font-semibold text-[#1A77DD]"><a href="article4.html" class="hover:text-[#2090FE]">Fun Measurement Facts</a></h3>
+          <p class="mt-2 text-sm sm:text-base text-gray-600">Explore quirky units like Smoot and Butt that add fun to measurements.</p>
+          <p class="mt-2 text-xs sm:text-sm text-gray-500">Keywords: weird units, fun measurement facts</p>
+        </div>
+        <div class="article-card bg-white p-6 rounded-lg shadow-md text-black">
+          <h3 class="text-base sm:text-lg md:text-xl font-semibold text-[#1A77DD]"><a href="article5.html" class="hover:text-[#2090FE]">Most Common Conversions</a></h3>
+          <p class="mt-2 text-sm sm:text-base text-gray-600">Discover the top conversions used daily, from kilometers to miles to Celsius to Fahrenheit.</p>
+          <p class="mt-2 text-xs sm:text-sm text-gray-500">Keywords: common unit conversions, popular converters</p>
+        </div>
+        <div class="article-card bg-white p-6 rounded-lg shadow-md text-black">
+          <h3 class="text-base sm:text-lg md:text-xl font-semibold text-[#1A77DD]"><a href="article6.html" class="hover:text-[#2090FE]">Daily Usage of Unit Converters</a></h3>
+          <p class="mt-2 text-sm sm:text-base text-gray-600">Explore how unit converters are seamlessly integrated into smartphones, apps, and daily life.</p>
+          <p class="mt-2 text-xs sm:text-sm text-gray-500">Keywords: unit converters daily use, smartphone converters</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>
